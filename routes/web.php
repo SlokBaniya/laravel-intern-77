@@ -46,15 +46,12 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/user/educationDetail2', 'IndexController2@educationDetail2')->name('educationDetail2');
 });
 
-<<<<<<< HEAD
 Route::get('/portfolio', 'IndexController@fetch');
 
 Route::get('/user/references', 'IndexController2@references');
 Route::post('/user/references', 'IndexConroller2@addReferences');
-=======
 
- Route::get('/skills', 'IndexController2@userdetail')->name('skills');
+Route::get('/skills', 'IndexController2@userdetail')->name('skills');
 
->>>>>>> 7698de74a5ffb82ead0cced0d775f41435bb264e
 Route::get('/profile', 'ProfileController@index');
 Route::get('/{username}', 'ProfileController@show');
