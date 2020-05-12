@@ -45,6 +45,30 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/user/addEducationalDetails2', 'IndexController2@addEducationDetails2')->name('addEducationDetails2');
     Route::get('/user/educationDetail2', 'IndexController2@educationDetail2')->name('educationDetail2');
 });
+Route::get('getExperience','indexController2@getExperience');
+Route::post('getExperience','indexController2@Experience');
+Route::view('/social_link',"social_links");
+
+Route::view('/experience',"experience");
+Route::post('/experiences','indexController2@experience')->name('sanjaya');
+
+Route::view('/social',"social");
+Route::post('/test','indexController2@Social')->name('socials');
+
+
+
+Route::get('socialSocial','SocialController@StoreSocial');
+Route::post('social_link_store','SocialController@StoreSocial');
+
+Route::any('/form',function(){
+    if(request()->isMethod('get'))
+        return view('social');
+    dd(request()->all());
+});
+
+
+
+
 
 Route::get('/portfolio', 'IndexController@fetch');
 
@@ -55,3 +79,11 @@ Route::get('/skills', 'IndexController2@userdetail')->name('skills');
 
 Route::get('/profile', 'ProfileController@index');
 Route::get('/{username}', 'ProfileController@show');
+<<<<<<< HEAD
+
+//Route::group(['prefix'=>'user',function(){
+//    Route::get('/HomeController@index')->name('user');
+//}]);
+
+=======
+>>>>>>> 451124379218def5a7625b14d204a7f769ed0317
