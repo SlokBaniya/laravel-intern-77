@@ -42,8 +42,8 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/unfollow', 'FollowerController@unfollow')->name('unfollow');
     Route::get('/user/educationDetail', 'IndexController2@educationDetail')->name('educationDetail');
     Route::post('/user/addEducationalDetails', 'IndexController2@addEducationDetails')->name('addEducationDetails');
-    Route::post('/user/addEducationalDetails2', 'IndexController2@addEducationDetails2')->name('addEducationDetails2');
-    Route::get('/user/educationDetail2', 'IndexController2@educationDetail2')->name('educationDetail2');
+    // Route::post('/user/addEducationalDetails2', 'IndexController2@addEducationDetails2')->name('addEducationDetails2');
+    // Route::get('/user/educationDetail2', 'IndexController2@educationDetail2')->name('educationDetail2');
 });
 Route::get('getExperience','indexController2@getExperience');
 Route::post('getExperience','indexController2@Experience');
@@ -57,8 +57,8 @@ Route::post('/test','indexController2@Social')->name('socials');
 
 
 
-Route::get('socialSocial','SocialController@StoreSocial');
-Route::post('social_link_store','SocialController@StoreSocial');
+Route::get('/socialSocial','SocialController@StoreSocial');
+Route::post('/social_link_store','SocialController@StoreSocial');
 
 Route::any('/form',function(){
     if(request()->isMethod('get'))
@@ -79,11 +79,8 @@ Route::get('/skills', 'IndexController2@userdetail')->name('skills');
 
 Route::get('/profile', 'ProfileController@index');
 Route::get('/{username}', 'ProfileController@show');
-<<<<<<< HEAD
 
 //Route::group(['prefix'=>'user',function(){
 //    Route::get('/HomeController@index')->name('user');
 //}]);
 
-=======
->>>>>>> 451124379218def5a7625b14d204a7f769ed0317

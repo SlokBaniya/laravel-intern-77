@@ -15,7 +15,7 @@ use App\User;
 use App\Services\UserProfileServices;
 use App\userprofile;
 use App\Http\Requests\UserProfileRequest;
-use App\Services\UserProfileServices;
+
 
 use App\Services\ReferenceService;
 
@@ -97,7 +97,7 @@ class IndexController2 extends Controller
 			ResponseService::sendHtmlResponse($skill,'skills','skill sucessfully added');
 		}
 	}
-    function educationDetail()
+    // function educationDetail()
       
     public function references()
     {
@@ -112,13 +112,13 @@ class IndexController2 extends Controller
         return back();
     }
 
-    public function create(RegisterSkillRequest $request)
-    {
-        $skill = SkillService::registeredSkill($request);
-        if (!is_null($skill)) {
-            ResponseService::sendHtmlResponse($skill, 'skills', 'skill sucessfully added');
-        }
-    }
+    // public function create(RegisterSkillRequest $request)
+    // {
+    //     $skill = SkillService::registeredSkill($request);
+    //     if (!is_null($skill)) {
+    //         ResponseService::sendHtmlResponse($skill, 'skills', 'skill sucessfully added');
+    //     }
+    // }
     function educationDetail()
     {
         $user = auth()->user();
@@ -154,5 +154,5 @@ class IndexController2 extends Controller
     }
 }
 
- -->
+
 

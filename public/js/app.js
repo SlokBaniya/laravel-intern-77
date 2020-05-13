@@ -2018,99 +2018,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      references: []
-    };
-  },
-  methods: {
-    addReferences: function addReferences() {
-      this.references.push({});
-    },
-    removeReferences: function removeReferences(index) {
-      this.references.splice(index, 1);
-    },
-    submit: function submit() {
-      axios.post('/form', {
-        references: this.references
-=======
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      experience: []
-    };
-  },
-  computed: {
-    workPlace: function workPlace() {},
-    startDate: function startDate() {},
-    endDate: function endDate() {},
-    formIsValid: function formIsValid() {
-      return this.workPlace, this.startDate, this.endDate();
-    }
-  },
-  methods: {
-    addSocialLink: function addSocialLink() {
-      this.experience.push({});
-    },
-    removeLink: function removeLink(index) {
-      this.experience.splice(index, 1);
-    },
-    submit: function submit() {
-      //alert('hey');
-      //e.preventDefault();
-      axios.post('experiene', {
-        workPlace: this.workPlace,
-        start: this.start,
-        end: this.end
->>>>>>> 451124379218def5a7625b14d204a7f769ed0317
-      });
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/profile_state.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/profile_state.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -2139,7 +2046,6 @@ __webpack_require__.r(__webpack_exports__);
   }
 }); // hoisting
 
-/***/ }),
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/social-form.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
@@ -37849,17 +37755,10 @@ render._withStripped = true
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ReferenceForm.vue?vue&type=template&id=15f94ed4&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ReferenceForm.vue?vue&type=template&id=15f94ed4& ***!
-  \****************************************************************************************************************************************************************************************************************/
-=======
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/experience-form.vue?vue&type=template&id=279a704c&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/experience-form.vue?vue&type=template&id=279a704c& ***!
   \******************************************************************************************************************************************************************************************************************/
->>>>>>> 451124379218def5a7625b14d204a7f769ed0317
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -37871,179 +37770,6 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-<<<<<<< HEAD
-  return _c(
-    "div",
-    { attrs: { method: "POST" } },
-    [
-      _c("h1", [_vm._v("References")]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          attrs: { type: "button" },
-          on: { click: _vm.addReferences }
-        },
-        [_vm._v("Add More")]
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.references, function(rf, index) {
-        return _c("div", [
-          _c(
-            "button",
-            {
-              key: index,
-              staticClass: "btn btn-danger float-right",
-              attrs: { type: "button" },
-              on: {
-                click: function($event) {
-                  return _vm.removeReferences(index)
-                }
-              }
-            },
-            [_vm._v("X")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "formGroupExampleInput" } }, [
-              _vm._v("Name:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: rf.name,
-                  expression: "rf.name"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { type: "text", name: "name", placeholder: "Enter name" },
-              domProps: { value: rf.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(rf, "name", $event.target.value)
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "formGroupExampleInput2" } }, [
-              _vm._v("Email:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: rf.email,
-                  expression: "rf.email"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "email",
-                name: "email",
-                placeholder: "Enter email"
-              },
-              domProps: { value: rf.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(rf, "email", $event.target.value)
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "formGroupExampleInput2" } }, [
-              _vm._v("Contact:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: rf.contact,
-                  expression: "rf.contact"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "contact",
-                placeholder: "Enter contact"
-              },
-              domProps: { value: rf.contact },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(rf, "contact", $event.target.value)
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "formGroupExampleInput2" } }, [
-              _vm._v("Designation:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: rf.designation,
-                  expression: "rf.designation"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "designation",
-                placeholder: "Enter designation"
-              },
-              domProps: { value: rf.designation },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(rf, "designation", $event.target.value)
-                }
-              }
-            })
-          ])
-        ])
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          attrs: { type: "submit" },
-          on: { click: _vm.submit }
-        },
-        [_vm._v("Submit")]
-      )
-    ],
-    2
-  )
-=======
   return _c("div", { staticClass: "container mb-5" }, [
     _c(
       "button",
@@ -38185,7 +37911,6 @@ var render = function() {
       [_vm._v("Submit")]
     )
   ])
->>>>>>> 451124379218def5a7625b14d204a7f769ed0317
 }
 var staticRenderFns = []
 render._withStripped = true
